@@ -2,6 +2,7 @@ import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
+
 // Setup
 
 const scene = new THREE.Scene();
@@ -60,15 +61,15 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('black2.jpg');
+const spaceTexture = new THREE.TextureLoader().load('./public/black2.jpg');
 scene.background = spaceTexture;
 
 
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load('moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('normal.jpg');
+const moonTexture = new THREE.TextureLoader().load('./public/moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('./public/normal.jpg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
@@ -85,7 +86,7 @@ moon.position.setX(-10);
 
 // Earth
 
-const earthTexture = new THREE.TextureLoader().load('earth.jpg');
+const earthTexture = new THREE.TextureLoader().load('./public/earth.jpg');
 
 const earth = new THREE.Mesh(
   new THREE.SphereGeometry(8, 40, 40),
@@ -103,7 +104,7 @@ earth.position.setX(-30);
 
 // Sun
 
-const sunTexture = new THREE.TextureLoader().load('sun.jpg');
+const sunTexture = new THREE.TextureLoader().load('./public/sun.jpg');
 
 const sun = new THREE.Mesh(
   new THREE.SphereGeometry(62, 40, 40),
@@ -121,7 +122,7 @@ sun.position.setX(-10);
 
 // Sun
 
-const jupiterTexture = new THREE.TextureLoader().load('jupiter.jpg');
+const jupiterTexture = new THREE.TextureLoader().load('./public/jupiter.jpg');
 
 const jupiter = new THREE.Mesh(
   new THREE.SphereGeometry(20, 40, 40),
